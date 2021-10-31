@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="contentResult"
+            type="com.android.hepsiburadafinalproject.model.Result" />
+
+        <variable
+            name="detailsFragment"
+            type="com.android.hepsiburadafinalproject.ui.fragment.DetailFragment" />
+
+
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F1F1F1"
+    tools:context=".ui.fragment.DetailFragment">
+
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="80dp"
+        app:imgUrl="@{contentResult.artworkUrl100}"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="20dp"
+        android:onClick="@{view->detailsFragment.backNavListener(view)}"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_backnavicon" />
+
+    <TextView
+        android:id="@+id/firstText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/catamaran_medium"
+        android:textSize="28sp"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:textStyle="bold"
+        android:textColor="#6342E8"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+
+    <View
+        android:id="@+id/line5"
+        android:layout_width="360dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="9dp"
+        android:visibility="invisible"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/secondText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/firstText" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="360dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="9dp"
+        android:visibility="invisible"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/thirdText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/secondText" />
+
+    <TextView
+        android:id="@+id/secondText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/catamaran_medium"
+        android:gravity="center_horizontal"
+        android:textColor="#6342E8"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/firstText" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="360dp"
+        android:layout_height="1dp"
+        android:visibility="invisible"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="9dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/fourthText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/thirdText" />
+
+    <TextView
+        android:id="@+id/thirdText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/catamaran_medium"
+        android:textSize="20sp"
+        android:textColor="#6342E8"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/secondText" />
+
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width="360dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"
+        android:layout_marginBottom="9dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/fifthText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fourthText" />
+
+    <TextView
+        android:id="@+id/fourthText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/catamaran_medium"
+        android:textSize="20sp"
+        android:textColor="#6342E8"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/thirdText" />
+
+    <TextView
+        android:id="@+id/fifthText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:collectionPrice="@{contentResult}"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:fontFamily="@font/catamaran_medium"
+        android:textColor="#6342E8"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/fourthText" />
+
+    <TextView
+        android:id="@+id/sixthText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/catamaran_medium"
+        android:gravity="center_horizontal"
+        android:textColor="#6342E8"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@id/fifthText"
+        app:releaseDate="@{contentResult.releaseDate}" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_likeicon" />
+
+
+    <View
+        android:id="@+id/line4"
+        android:layout_width="240dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="9dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/buyButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sixthText" />
+
+
+    <Button
+        android:id="@+id/buyButton"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#6342E8"
+        android:text="Buy"
+        android:textColor="@color/white"
+        app:cornerRadius="20dp"
+        app:icon="@drawable/ic_carticon"
+        app:iconTint="@color/white"
+        app:iconPadding="8dp"
+        app:iconGravity="textStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/sixthText"
+        app:layout_constraintVertical_bias="0"
+        app:strokeColor="#34A853" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+</layout>
