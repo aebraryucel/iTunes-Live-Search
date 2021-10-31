@@ -197,7 +197,7 @@ class MainFragment : Fragment() {
              }
      }
 
-    fun showShimmer(){
+    fun showShimmer(){//loadstate e göre shimmer effect in açılıp kapanması
         lifecycleScope.launch {
             fragmentAdapter?.loadStateFlow?.collectLatest { loadStates ->
                 if(loadStates.refresh is LoadState.Loading){

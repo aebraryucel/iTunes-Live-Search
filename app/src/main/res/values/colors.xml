@@ -7,4 +7,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="black_textcolor">#1E1E1E</color>
+    <color name="search_field_background">#F4F4F4</color>
+    <color name="purple_textcolor">#6342E8</color>
+    <color name="recycler_item_backgroundcolor">#E8E7E7</color>
+    <color name="detail_fragment_background">#F1F1F1</color>
 </resources>

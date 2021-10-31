@@ -9,4 +9,5 @@
     <string name="explore">Explore</string>
     <string name="release_date">Release Date:</string>
     <string name="connection_toast">Connection problem! Please check your internet connection!</string>
+    <string name="buy">Buy</string>
 </resources>

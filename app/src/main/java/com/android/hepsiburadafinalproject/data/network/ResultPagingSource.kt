@@ -10,8 +10,6 @@ import com.android.hepsiburadafinalproject.util.Constants.Companion.NETWORK_PAGE
 
 class ResultPagingSource(val service:iTunesAPI,val term:String,val entity:String) :PagingSource<Int, Result>(){
 
-
-
     override fun getRefreshKey(state: PagingState<Int, Result>): Int? {
 
 
@@ -19,11 +17,9 @@ class ResultPagingSource(val service:iTunesAPI,val term:String,val entity:String
             state.closestPageToPosition(anchorPosition)?.prevKey?.plus(1)
                 ?: state.closestPageToPosition(anchorPosition)?.nextKey?.minus(1)
             }
-        //return null
     }
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Result> {
-        // Start refresh at position 1 if undefined.
         val position = params.key ?: INITIAL_LOAD_SIZE
         val offset = if (params.key != null) ((position - 1) * NETWORK_PAGE_SIZE) + 1 else INITIAL_LOAD_SIZE
         return try {
@@ -33,14 +29,11 @@ class ResultPagingSource(val service:iTunesAPI,val term:String,val entity:String
             val nextKey = if (response.isEmpty()) {
                 null
             } else {
-                // initial load size = 3 * NETWORK_PAGE_SIZE
-                // ensure we're not requesting duplicating items, at the 2nd request
                 position + (params.loadSize / NETWORK_PAGE_SIZE)
             }
             LoadResult.Page(
                 data = response,
-                prevKey = null, // Only paging forward.
-                // assume that if a full page is not loaded, that means the end of the data
+                prevKey = null,
                 nextKey = nextKey
             )
         } catch (e: Exception) {

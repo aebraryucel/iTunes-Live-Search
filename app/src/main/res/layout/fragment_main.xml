@@ -30,9 +30,9 @@
         app:boxStrokeWidthFocused="0dp"
         app:endIconMode="clear_text"
         android:hint="@string/search"
-        app:hintTextColor="#1E1E1E"
-        android:textColorHint="#1E1E1E"
-        android:backgroundTint="#F4F4F4"
+        app:hintTextColor="@color/black_textcolor"
+        android:textColorHint="@color/black_textcolor"
+        android:backgroundTint="@color/search_field_background"
         android:fontFamily="@font/sfpro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,14 +44,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:textColor="#1E1E1E"
+            android:textColor="@color/black_textcolor"
             android:fontFamily="@font/sfpro"
             android:textSize="16sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageViewPoster"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginStart="15dp"
@@ -80,7 +80,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/movies"
-            android:textColor="#1E1E1E"
+            android:textColor="@color/black_textcolor"
             android:onClick="@{()->mainFragment.moviesOnClick()}"
             android:textSize="12sp"
             app:cornerRadius="10dp" />
@@ -102,7 +102,7 @@
             android:text="@string/apps"
             android:textSize="12sp"
             android:onClick="@{()->mainFragment.appsOnClick()}"
-            android:textColor="#1E1E1E"
+            android:textColor="@color/black_textcolor"
             style="?attr/materialButtonOutlinedStyle"
             />
         <Button
@@ -111,7 +111,7 @@
             android:layout_height="wrap_content"
             android:text="@string/books"
             android:textSize="12sp"
-            android:textColor="#1E1E1E"
+            android:textColor="@color/black_textcolor"
             android:onClick="@{()->mainFragment.booksOnClick()}"
             app:cornerRadius="10dp"
             style="?attr/materialButtonOutlinedStyle"
@@ -169,7 +169,7 @@
         android:layout_marginTop="15dp"
         android:fontFamily="@font/lato"
         android:text="@string/explore"
-        android:textColor="#1E1E1E"
+        android:textColor="@color/black_textcolor"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/toggleButton"

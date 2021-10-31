@@ -24,7 +24,7 @@
         android:layout_height="240dp"
         app:cardCornerRadius="25dp"
         app:strokeWidth="1dp"
-        app:strokeColor="#F4F4F4"
+        app:strokeColor="@color/search_field_background"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="12dp"
@@ -37,7 +37,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:background="#E8E7E7"
+            android:background="@color/recycler_item_backgroundcolor"
             android:layout_height="match_parent">
 
             <ImageView
@@ -60,7 +60,7 @@
                 android:fontFamily="@font/lato"
                 android:gravity="center_horizontal"
                 android:maxLines="2"
-                android:textColor="#6342E8"
+                android:textColor="@color/purple_textcolor"
                 android:textSize="15sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -73,7 +73,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/lato"
-                android:textColor="#6342E8"
+                android:textColor="@color/purple_textcolor"
                 android:textSize="15sp"
                 android:textStyle="bold"
                 android:layout_marginTop="64dp"
@@ -87,7 +87,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/lato"
-                android:textColor="#6342E8"
+                android:textColor="@color/purple_textcolor"
                 android:textSize="12sp"
                 android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="@+id/collectionPrice"
