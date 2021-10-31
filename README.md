@@ -22,7 +22,6 @@ This app lists music, movies, books and apps available on itunes. In addition, u
 
 <h1>Screenshots</h1>
 <img src="screen2.gif" title="icon" alt="Image" />
-<img src="shimmer.png" title="icon" alt="Image" />
 <img src="mainScreen.png" title="icon" alt="Image" />
 <img src="search.png" title="icon" alt="Image" />
 <img src="detailScreen.png" title="icon" alt="Image" />
