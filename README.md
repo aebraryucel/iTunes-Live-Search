@@ -3,7 +3,7 @@
 This app lists music, movies, books and apps available on itunes. In addition, users can see the details of the items in the lists. iTunes Search API is used for these.
 
 </br>
-<h2>Architecture Components</h2>
+<h2>Used Libraries,Features</h2>
 
 <ul>
 
